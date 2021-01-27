@@ -35,29 +35,29 @@ function Register() {
       <h1>Register</h1>
       
       <div className="RegisterForm">
-      {/* <h1>* Username (Between 3-15 Characters)</h1> */}
+      <h1>* Username (Between 3-15 Characters)</h1>
 
         <input
           type="text"
-          placeholder="Username..."
+          placeholder=" Username..."
           onChange={(event) => {
             setUsername(event.target.value);
           }}
         />
-              {/* <h1>* Password (Between 4-15 Characters)</h1> */}
+              <h1>* Password (Between 4-15 Characters)</h1>
 
         <input
           type="password"
-          placeholder="Password..."
+          placeholder=" Password..."
           onChange={(event) => {
             setPassword(event.target.value);
           }}
         />
-              {/* <h1>* Email</h1> */}
+              <h1>* Email</h1>
 
           <input
           type="email"
-          placeholder="Email..."
+          placeholder=" Email..."
           onChange={(event) => {
             setEmail(event.target.value);
           }}

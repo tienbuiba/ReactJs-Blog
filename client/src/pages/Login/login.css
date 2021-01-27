@@ -5,26 +5,42 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Avenir Next";
+
 }
 
-
+.Login h1{
+   
+}
 .LoginForm {
     display: flex;
     flex-direction: column;
+    font-family: "Avenir Next";
+
+}
+.LoginForm h1{
+   font-size: 18px;
+   margin: 0px;
+   margin-left: 8px;
+    font-family: "Avenir Next";
+
 }
 
 .LoginForm input{
-    margin: 10px;
+    margin: 6px;
     width: 400px;
     height: 50px;
     font-size: 20px;
+    border-radius:   6px 6px 6px 6px;  
+
 }
 .LoginForm  Button{
-    margin: 10px;
+    margin: 7px;
     width: 400px;
     height: 50px;
     font-size: 20px;
     background-color: #3aafa9;
+    margin-top: 22px;
 }
 
 .LoginForm Button:hover{
@@ -34,6 +50,6 @@
 
 h1 {
     font-family: "Avenir Next";
-    font-size: 35px;
+    font-size: 48px;
 
 }

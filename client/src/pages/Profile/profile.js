@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Image } from "cloudinary-react";
 import "./profile.css";
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import { useSnackbar } from 'notistack';
-
+import moment from "moment";
+import readingTime from "reading-time";
 function Profile() {
   const [yourUploads, setYourUploads] = useState([]);
   useEffect(() => {
@@ -20,7 +20,7 @@ function Profile() {
 
     <div>
       <div className="Username">
-        <h1>YourName: {localStorage.getItem("username")}    /   Your Uploaded</h1>
+        <h1>Hi: {localStorage.getItem("username")}    /   Your Uploaded</h1>
      
       </div>
       <div className="Profile">
@@ -28,25 +28,28 @@ function Profile() {
 
         {yourUploads.map((val, key) => {
           return (
-            <div className="Post">
-              <div className="Image">
-                <Image cloudName="tienbui" publicId={val.image} />
-              </div>
+            <div className="Post">              
               <div className="Content">
                 <div className="title">
                   {" "}
-                  {val.title} / Post by @{val.author}
+                  {val.title} 
                 </div>
-                <div className="description">{val.description}</div>
+                <div className="description"> 
+                {val.description.length > 220
+                  ? val.description.substring(0, 220) + " ..."
+                  : val.description}
+                    </div>
               </div>
               <div className="Engagement">
+                
                 <FavoriteIcon
                 />
                 {val.likes}
               </div>
               <div className="created_at">
-                {" "}
-                Uploaded On:{val.created_at}
+              {readingTime(val.description).minutes} Min Read </div>
+              <div className="upload_on">
+             <p1 > Uploaded On: {moment(val.created_at).format("DD MMM YYYY")}</p1>
               </div>
 
 

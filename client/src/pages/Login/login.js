@@ -39,23 +39,29 @@ function Login() {
   };
 
   return (
-    <div className="Login">
+    <div className=" Login">
       <h1>Login</h1>
       <div className="LoginForm">
+      <h1>  Username: </h1>
+
         <input
           type="text"
-          placeholder="Username..."
+          placeholder=" Username..."
           onChange={(event) => {
             setUsername(event.target.value);
           }}
+          
         />
+              <h1>  Password: </h1>
+
         <input
           type="password"
-          placeholder="Password..."
+          placeholder=" Password..."
           onChange={(event) => {
             setPassword(event.target.value);
           }}
         />
+
         <Button  size={"medium'"} variant={"contained"} onClick={login}>Login</Button>
         <h1 style={{ color: "red" }}>{errorMessage} </h1>
       </div>

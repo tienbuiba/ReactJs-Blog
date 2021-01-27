@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div className="App">
         
-<Scroll showBelow={250} />
+<Scroll showBelow={10} />
        
         <Navbar />
 

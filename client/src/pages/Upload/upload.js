@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 
 function Upload() {
   const [title, setTitle] = useState("");
+  const [type, setType] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
 
@@ -40,18 +41,20 @@ function Upload() {
   };
   return (
     <div className="Upload">
-      <h1>Create A Post</h1>
       <div className="UploadForm">
+      <h1>Create A Post</h1>
         <input
           type="text"
-          placeholder="Title..."
+          placeholder=" Title..."
           onChange={(event) => {
             setTitle(event.target.value);
           }}
+          
         />
+           
         <input
           type="text"
-          placeholder="Description..."
+          placeholder=" Description..."
           onChange={(event) => {
             setDescription(event.target.value);
           }}

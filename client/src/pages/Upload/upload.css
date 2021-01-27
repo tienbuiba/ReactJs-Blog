@@ -5,11 +5,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 .UploadForm {
-    display: flex;
-    flex-direction: column;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+  border: 2px solid rgb(150, 163, 179) ;
+  box-shadow: 1px 1px 13px 1px rgb(240, 242, 245);
+  font-size: 23px;
+  margin-top: 60px;
+  border-radius:   8px 8px 8px 8px;  
+
 }
 
 .UploadForm input{
@@ -17,6 +29,8 @@
     width: 400px;
     height: 50px;
     font-size: 20px;
+    border-radius:   6px 6px 6px 6px;  
+
 }
 .UploadForm Button{
     margin: 10px;

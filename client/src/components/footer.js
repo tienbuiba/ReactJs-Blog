@@ -9,9 +9,9 @@ import "./footer.css";
 function Copyright() {
   return (
     <div className="footer">  <Typography  variant="body2" color="textSecondary">
-    {'Copyright © '}
+    {' Made with ❤️ by '}
     <Link color="inherit" href="https://www.facebook.com/profile.php?id=100015361149056">
-     TienBui
+   Tien Bui
     </Link>{' '}
     {new Date().getFullYear()}
     {'.'}

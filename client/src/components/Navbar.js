@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Avatar } from 'antd';
 
+
 function Navbar() {
   const [loggedIn, setLoggedIn] = useState(true);
 
@@ -15,9 +16,14 @@ function Navbar() {
 
     <div className="Navbar">
       <div className="menu-title">
-        <Avatar size={65} src="https://storage.googleapis.com/art_images/samplelogo.png" />
-        <span > My Project  </span></div>
-        <a href="/">Home</a>
+        <img  src="https://storage.googleapis.com/art_images/samplelogo.png" />
+        <input
+        
+          placeholder="  Sreach User:"
+          
+       
+        /></div>
+        <a href="/">Blogs</a>
 
 
       { loggedIn ? (
@@ -32,8 +38,8 @@ function Navbar() {
       ) : (
           <> 
           
-            <a href="/aboutme">AboutMe</a>
-            <a href="/register">SignUp</a>
+            <a href="/aboutme">About</a>
+            <a href="/register">Signup</a>
             <a href="/login">Login</a>
 
           </>

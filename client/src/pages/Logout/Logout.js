@@ -10,22 +10,20 @@ export default function Logout() {
   let history = useHistory();
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-    const logout = () => {
-       localStorage.removeItem("loggedIn");
-       localStorage.removeItem("username");
-       enqueueSnackbar('Successfully LogOut');    
+  const logout = () => {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("username");
+    enqueueSnackbar('Successfully LogOut');
+    history.push("/");
+    window.location.reload();
 
-       history.push("/");      
-       window.location.reload();
-      
-   } 
-  
-  
+  }
+
+
+
   return (
     <div className="logout">
-   
-      <Button  size={"medium'"} variant={"contained"} onClick={logout}>Logout</Button>
-      
+      <Button size={"medium'"} variant={"contained"} onClick={logout}>Logout</Button>
     </div>
   );
 }

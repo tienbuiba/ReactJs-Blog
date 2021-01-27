@@ -5,67 +5,116 @@
     flex-direction:column-reverse;
     justify-content: center;
     align-items: center;
-padding-top: 100px;}
+    padding-top: 67px;
+}
 
+.Home .ok{
+    width:1340px;
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:rgb(241, 246, 248);
+    align-items: center;
+    font-family: 'Shadows Into Light', serif;
+    box-shadow: 1.5px 1.5px 1.5px rgb(218, 203, 203);
+   
+    }
+    .Home .ok h1{
+       
+        font-weight: 700;
+        line-height: 1.15;
+        margin: 1.25rem 0px;
+        font-size: 4.5em;      
+        color: rgb(255, 82, 82);
+        font-family: "Comic Sans MS", cursive, sans-serif;
+
+        }
+
+        
+        .Home .ok p2{
+            font-weight: 400;
+            color: rgb(55, 71, 79);
+            line-height: 1.15;
+            margin: 1.25rem 0px;
+            font-size: 2.5em;
+            font-family: 'Shadows Into Light', serif;
+
+            }
 .Home .Post {
-    width: 500px;
-    height: 500px;
-	box-shadow: 1px 1px 10px 1px black;
+    width: 770px;
+    height: 270px;
+    border-radius: 1px;
+    border: 1px solid rgb(221, 221, 221);
     display: flex;
     flex-direction: column;
     margin: 20px;
-}
-.Home .Post .Image{
-    flex: 70%;
-   
-}
+    font-size: 20px;
+    font-family: "Avenir Next";
+    border-radius:   50px 50px 50px 50px;  
 
-.Home .Post .Image img {
-    width: 100%;
 }
+.Post:hover {
+    cursor: pointer;  
+   
+  }
+
+
 
 .Home .Post .Content{
-    flex: 30%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+   
+  
+    font-weight: 700;
+    padding: 0;
+    margin: 40px 0;
+    line-height: 34.5px;
+    letter-spacing: -.45px;
+    font-size: 18px;
+ 
 }
 
 .Home .Post .Content .title {
-    flex: 30%;
-    text-align: center;
-    font-size: 20px;
+    flex: 30%;  
+    font-size: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
 }
 
 .Home .Post .Content .description {
     flex: 50%;
-    text-align: center;
+    text-align: center;  
+    font-size: 20px;
+    font-family: 'Shadows Into Light', serif;
+    font-size: 21px;
+    letter-spacing: -.03px;
+    line-height: 1.58;
+    color: rgb(83, 99, 107);
 
 }
 
 .Home .Post .Engagement {
-    flex: 20%;
-    display: grid;
-    place-items: center;
+    color: rgb(3, 3, 3);
+    font-size: 18px;
+    position: absolute;
+    right: 300px;
+    margin-top: 220px;
 }
-.Home .Post .Engagement #likeButton {
-    font-size: 40px;
-     color: grey;
 
-}
-.Home .Post .Engagement #likeButton:hover{
-    cursor: pointer;
-}
-.Home .Post .Engagement #likeButton:active{
-    color: black;
 
-}
-.created_at{
-    color: rgb(8, 1, 1);
-    font-size: 17px;
-    font-family: "Avenir Next";
-     margin-left: 110px;
 
+.Home .Post .created_at{
+
+    color: rgb(181, 181, 181);
+    font-size: 18px;
+    position: absolute;
+    right: 300px;
+    margin-top: 1px;
+}
+.Home .Post .upload_on{
+    color: rgb(181, 181, 181);
+    font-size: 18px;  
+   margin-left: 29px;
+   margin-bottom: 1px;
+   margin-top: 10px;
   
 }
