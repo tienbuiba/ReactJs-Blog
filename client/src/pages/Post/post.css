@@ -1,0 +1,91 @@
+.OK {
+  width: 100%;
+  padding-top: 67px;
+  background-color: #f5f5fa;
+}
+
+
+  
+.OK .Post {
+
+  border-radius: 1px;
+  border: 0.5px solid rgb(221, 221, 221);
+  margin: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction:column-reverse;
+  justify-content: center;
+  align-items: center;
+  border-radius:   45px 45px 45px 45px;  
+
+}
+
+
+
+.OK .Post .Content{
+  font-weight: 700;
+  padding: 0;
+ 
+
+}
+
+.OK .Post .Content .title {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 48px;
+  margin-right: 150px;
+  margin-left: 200px;
+  color: rgb(54, 53, 55);
+
+}
+.OK .Post .Content .Image {
+ margin-top: 70px;
+ margin-bottom: 50px;
+ margin-right: 150px;
+ margin-left: 201px;
+ height: 100%;
+ width: 100%;
+}
+.OK .Post  .Share {
+  display: flex;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 13px;
+  margin-left: 1100px;
+  margin-top: 50px;
+  color: rgb(12, 11, 11); 
+ 
+ }
+ .OK .Post  .Love {
+  display: flex;
+  margin-left: 90px;
+  margin-top: 30px;
+  size: 30px;
+  color: rgb(153, 14, 14); 
+ 
+ }
+
+ 
+
+.OK .Post .Content .description {
+  flex: 50%; 
+  font-size: 20px;
+  font-family: 'Shadows Into Light', serif;
+  letter-spacing: -.03px;
+  line-height: 1.58;
+  word-spacing: 3px;
+  color: rgb(83, 99, 107); 
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 200px;
+
+}
+
+.OK .Post .upload_on{
+ color: rgb(48, 47, 47);
+ font-size: 14px; 
+ font-family: "Quicksand";
+ margin-right: 150px;
+ margin-left: 200px;
+
+}
+

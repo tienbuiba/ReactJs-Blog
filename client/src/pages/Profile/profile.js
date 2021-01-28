@@ -1,10 +1,11 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Image } from "cloudinary-react";
 import "./profile.css";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import moment from "moment";
 import readingTime from "reading-time";
+
+
 function Profile() {
   const [yourUploads, setYourUploads] = useState([]);
   useEffect(() => {

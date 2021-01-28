@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 function Upload() {
   const [title, setTitle] = useState("");
   const [type, setType] = useState("");
+
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
 
@@ -31,6 +32,7 @@ function Upload() {
 
       Axios.post("http://localhost:8080/upload", {
         title: title,
+        type: type,
         description: description,
         image: fileName,
         author: localStorage.getItem("username"),
@@ -48,6 +50,14 @@ function Upload() {
           placeholder=" Title..."
           onChange={(event) => {
             setTitle(event.target.value);
+          }}
+          
+        />
+        <input
+          type="text"
+          placeholder=" Type..."
+          onChange={(event) => {
+            setType(event.target.value);
           }}
           
         />

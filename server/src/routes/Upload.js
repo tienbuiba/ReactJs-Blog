@@ -5,13 +5,14 @@ const db = require("../config/db");
 
 router.post("/", (req, res) => {
   const title = req.body.title;
+  const type = req.body.type;
   const description = req.body.description;
   const image = req.body.image;
   const author = req.body.author;
 
   db.query(
-    "INSERT INTO `upload` (title, description, image, author) VALUES (?, ?, ?, ?);",
-    [title, description, image, author],
+    "INSERT INTO `upload` (title,type, description, image, author) VALUES (?, ?, ?, ?, ?);",
+    [title,type, description, image, author],
     (err, results) => {
       console.log(err);
       res.send(results);
@@ -22,6 +23,17 @@ router.post("/", (req, res) => {
 
 router.get("/", (req, res) => {
   db.query("SELECT * FROM `upload`", (err, results) => {
+    if (err) {
+      console.log(err);
+    }
+    res.send(results);
+  });
+});
+
+router.get("/getFromId/:id", (req, res) => {
+  
+  const id=req.params.id;
+  db.query("SELECT * FROM `upload` WHERE id = ? ;", id, (err, results) => {
     if (err) {
       console.log(err);
     }

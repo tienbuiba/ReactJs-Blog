@@ -16,14 +16,14 @@ function Navbar() {
 
     <div className="Navbar">
       <div className="menu-title">
-        <img  src="https://storage.googleapis.com/art_images/samplelogo.png" />
+        <img src="https://storage.googleapis.com/art_images/samplelogo.png" />
         <input
-        
+
           placeholder="  Sreach User:"
-          
-       
+
+
         /></div>
-        <a href="/">Blogs</a>
+      <a href="/">Blogs</a>
 
 
       { loggedIn ? (
@@ -36,9 +36,7 @@ function Navbar() {
 
         </>
       ) : (
-          <> 
-          
-            <a href="/aboutme">About</a>
+          <>
             <a href="/register">Signup</a>
             <a href="/login">Login</a>
 

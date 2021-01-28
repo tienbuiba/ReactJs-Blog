@@ -4,40 +4,31 @@ import Axios from "axios";
 import readingTime from "reading-time";
 import moment from "moment";
 import ShareIcon from '@material-ui/icons/Share';
+import { useHistory } from "react-router-dom";
 function Home() {
-  const [uploads, setUploads] = useState([]);
 
+  const [uploads, setUploads] = useState([]);
+  let history = useHistory();
   useEffect(() => {
     Axios.get("http://localhost:8080/upload").then((response) => {
       setUploads(response.data);
     });
   }, []);
 
-  // const likePost = (id, key) => {
-  //   var tempLikes = uploads;
-  //   tempLikes[key].likes = tempLikes[key].likes + 1;
-
-  //   Axios.post("http://localhost:8080/upload/like", {
-  //     userLiking: localStorage.getItem("username"),
-  //     postId: id,
-  //   }).then((response) => {
-  //     setUploads(tempLikes);
-  //     window.location.reload();
-
-  //   });
-  // };
-  // const onBackClick = () => {
-  //   window.history.go();
-  //   window.history.back();
-  // };
   return (
     <div className="Home">
 
 
+
       {uploads.map((val, key) => {
         return (
+          
 
-          <div className="Post">
+
+          <div className="Post"    key={key}
+          onClick={() => {
+            history.push(`/upload/${val.id}`);
+          }}>
 
             <div className="Content">
               <div className="title">
@@ -52,8 +43,7 @@ function Home() {
 
               </div>
 
-            </div>
-          
+            </div>     
            
 
             
@@ -65,13 +55,16 @@ function Home() {
               </div>
               <div className="Engagement">
             <ShareIcon  /> </div>
+            <div className="box">
+             <p1>{val.type}</p1>
           
+              </div>
           </div>
 
         );
       })}
       <div className="ok">
-        <h1>Saad Pasta</h1>
+        <h1>Winter Warriors</h1>
         <p2>Software Developer</p2>
       </div>
 

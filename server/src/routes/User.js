@@ -16,63 +16,6 @@ router.post("/register", (req, res) => {
     }
   );
 });
-// const createAccount = async (req, res, next) => {
-//   const newAccount = {
-//     username: req.body.username,
-//     password: req.body.password,
-//     display: req.body.display,
-//     role: req.body.role
-//   }
-
-//   console.log('tao moi tai khoan', newAccount);
-//   if (!newAccount.username) {
-//     const result = {
-//       status: 0,
-//       message: 'Khong dc de trong ',
-//     };
-//   res.status(400).send(result);
-//   };
-
-//   if (!newAccount.password || newAccount.password.length < 6) {
-//     const result = {
-//       status: 0,
-//       message: 'Mat khau phai dai hon 6 ki tu ',
-//     };
-//     res.status(400).send(result);
-//   };
-  
-//   const message = await accountService.create(newAccount);
-//   res.send({
-//     status: 1,
-//     message: message
-//   });
-  
-// }
-// const create = async (newAccount) => {
-//   const checkExistedSQL = `
-//     SELECT count(username) as can FROM account WHERE username = ? ;
-//   `;
-//   const exist = await db.queryOne(checkExistedSQL, [newAccount.username]);
-//   if (exist.can > 0) {
-//     return "Tai khoan da ton tai ";
-
-//   } else {
-//     const encryptedPassword =
-//       await security.generatePassword(newAccount.password);
-//     console.log(encryptedPassword);
-//     const insertSQL = ` INSERT INTO account(username, password, role, display) VALUES ( ? ,? ,? ,?) ;
-//     `;
-//     await db.query(insertSQL, [
-//       newAccount.username,
-//        newAccount.role,
-//       newAccount.display,
-//       encryptedPassword
-     
-//     ]);
-
-//     return "Tao tk thanh cong";
-//   }
-// }
 
 router.post("/login", (req, res) => {
   const username = req.body.username;
